@@ -7,7 +7,7 @@ Router.get('/', (req, res)=>{
 })
 
 Router.post('/', (req, res)=>{
-    Model.Customer.findAll({
+    Model.User.findAll({
         where:{
             email: req.body.email
         }

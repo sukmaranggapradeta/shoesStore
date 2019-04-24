@@ -28,7 +28,6 @@ const multerConf = {
 
 const upload = multer({ dest: './public/products/' })
 
-
 Router.get('/', (req, res)=>{
     res.render('./products/add_product.ejs')
 })

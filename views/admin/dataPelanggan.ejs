@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./bootstrap.ejs')%>
+    <title>Data Subject</title>
+</head>
+
+<body>
+    <%- include('./navbar.ejs')%>
+    <div>
+        <div class="container-fluid-nav text-center">
+            <h1> Data Transaction </h1>
+        </div>
+        <div class="container-fluid">
+                <% if(err){ %>
+                    <div class="alert alert-danger">
+                       <strong><%=err%></strong>
+                   </div>
+                <% } %>
+            <table id="total votes" class="table table-hover text-centered">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Season </th>
+                        <th>Outcome</th>
+                        <th>Income</th>
+                        <th>Total</th>
+                        <th>Options</th>
+                    </tr>
+                    <%for(let i = 0; i < data.length; i++){ %>
+                    <tr>
+                        <td><%=conRome(i+1)%></td>
+                        <td><%=data[i].name%></td>
+                        <td><%=data[i].outcome%></td>
+                        <td><%=data[i].income%></td>
+                        <td><%=data[i].Vegetables.length%></td>
+                        <td><a href="/transaction/<%=data[i].id%>/detail" class="btn btn-warning">Detail Transaction</a></td>
+                    </tr>
+                    <% } %>
+                </thead>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+</body>
+
+</html>

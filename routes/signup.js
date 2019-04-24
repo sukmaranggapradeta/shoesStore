@@ -8,10 +8,10 @@ Router.get('/', (req, res)=>{
 Router.post('/', (req, res)=>{
     let input = req.body
     if (input.psw === input.pswrepeat){
-        Model.Customer.cekEmail(input.email)
+        Model.User.cekEmail(input.email)
         .then((isUnique)=>{
             if (isUnique){
-                Model.Customer.create({
+                Model.User.create({
                     email: input.email,
                     password: input.psw,
                     name: input.name,
