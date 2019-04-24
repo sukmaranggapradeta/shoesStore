@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <%- include('../../partials/title.ejs') %>
+    <body class="w3-content" style="max-width:1200px">
+        <%- include('../../partials/slidebar.ejs') %>
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:250px">
+    <!-- Push down content on small screens -->
+    <div class="w3-hide-large" style="margin-top:83px"></div>
+    <%- include('../../partials/header.ejs') %>
+<!-- sign up form -->
+    <div class="container">
+        <div class="wrapper animated bounceInLeft">
+            <div class="contact">
+
+            <form  action="/add_product" method="POST" enctype="multipart/form-data">
+                <div class="colsignup">
+                    <h1>New Product</h1>
+                    <hr>
+                    <label for="name"><b>Name</b></label>
+                    <input type="text" placeholder="Enter Name" name="name" required>
+
+                    <label for="price"><b>Price</b></label>
+                    <input type="text" placeholder="Enter price" name="price" required>
+
+                    <label for="description"><b>Desciption</b></label>
+                    <textarea rows="4" cols="50" name="description"></textarea>
+
+                    <label for="pic"><b>Pic</b></label>
+                    <input type="file" name="pic" accept="image/*">
+
+                    <label for="size"><b>Size</b></label>
+                    <input type="text" placeholder="size" name="size" required>
+
+                    <label for="stock"><b>Stock</b></label>
+                    <input type="text" placeholder="stock" name="stock" required>
+                    
+                    <input type="submit" value="ADD PRODUCT">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('../../partials/script.ejs')%>
+    </body>
+</html>
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <%- include('../../partials/title.ejs') %>
+    <body class="w3-content" style="max-width:1200px">
+        <%- include('../../partials/slidebar.ejs') %>
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:250px">
+    <!-- Push down content on small screens -->
+    <div class="w3-hide-large" style="margin-top:83px"></div>
+    <%- include('../../partials/header.ejs') %>
+    <!-- Login -->
+    <div class="container">
+        <div class="wrapper animated bounceInLeft">
+            <div class="contact">
+                <form action="/login" method="POST">
+                    <div class="row">
+                    <h2 style="text-align:center">Login with Social Media or Manually</h2>
+                    <div class="vl">
+                        <span class="vl-innertext">or</span>
+                    </div>
+
+                    <div class="col">
+                        <a href="#" class="fb btn">
+                        <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                        </a>
+                        <a href="#" class="twitter btn">
+                        <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+                        </a>
+                        <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+                        </i> Login with Google+
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <div class="hide-md-lg">
+                        <p>Or sign in manually:</p>
+                        </div>
+
+                        <input type="text" name="email" placeholder="Email/Phone number" required>
+                        <input type="password" name="psw" placeholder="Password" required>
+                        <input type="submit" value="Login">
+                    </div>
+                    
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!-- sign up || forget pass -->
+    <div class="bottom-container">
+    <div class="row">
+        <div class="col">
+        <a href="/signup" style="color:white" class="btn">Sign up</a>
+        </div>
+        <div class="col">
+        <a href="/forgetpassword" style="width:auto;" style="color:white" class="btn">Forgot password?</a>
+        </div>
+    </div>
+    </div>
+
+    <%- include('../../partials/script.ejs')%>
+    </body>
+</html>
