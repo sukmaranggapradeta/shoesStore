@@ -22,6 +22,7 @@ app.use('/login', require('./routes/login'))
 app.use('/logout', require('./routes/logout'))
 app.use('/signup', require('./routes/signup'))
 app.use('/add_product', isLogin, require('./routes/add_product'))
+app.use('/admin', require('./routes/admin'))
 
 app.listen(PORT, ()=>{
     console.log(`server running on port ${PORT}...`)
